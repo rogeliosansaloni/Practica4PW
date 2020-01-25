@@ -95,6 +95,7 @@ function muestraListado (listado) {
         var linkText = document.createTextNode("Más información");
         link.appendChild(linkText);
         link.className = "link";
+        link.id = "link";
         var id = listado.data.glasses[i].id;
         function cambiaDetalle(id) {
             return function() {extraeDetalle(id)};
