@@ -8,26 +8,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Practica 4</title>
     <style>
-        body{
+        body.initialBody{
             display:grid;
             height: 100vh;
             grid-template-columns: 100%;
             grid-template-rows: 7% 78% 10%;
             overflow-y: hidden;
         }
+
+        body.bigHeader{
+            display:grid;
+            height: 100vh;
+            grid-template-columns: 100%;
+            grid-template-rows: 85% 0 10%;
+            overflow-y: hidden;
+        }
+
         #header {
             overflow: hidden;
+            padding-top: 10px;
         }
 
         #list {
             height: 100%;
         }
 
-
     </style>
 </head>
-<body >
-    <iframe id="header" scrolling="no" src="./HTML/Header.html" width="100%" height="40vh" frameborder="0"></iframe>
+<body class="initialBody">
+    <iframe id="header" src="./HTML/Header.html" width="100%" height="100%" frameborder="0"></iframe>
 
     <iframe id="list" src="./HTML/List.html" width="100%" frameborder="0"></iframe>
 
@@ -35,8 +44,19 @@
 
     <script>
         document.getElementById("header").addEventListener('load',function(e){
-            document.getElementById("header").contentWindow.document.getElementById("x").addEventListener("click", () => {
+            let doc = document.getElementById("header").contentWindow.document;
+            doc.getElementById("x").addEventListener("click", () => {
                 console.log("holi");
+
+                if(document.body.classList.contains("initialBody")){
+                    document.body.classList.remove("initialBody");
+                    document.body.classList.add("bigHeader");
+                    document.getElementById("header").height = "100%";
+                }else{
+                    document.body.classList.remove("bigHeader");
+                    document.body.classList.add("initialBody");
+                    document.getElementById("header").height = "40vh";
+                }
             })
         });
     </script>

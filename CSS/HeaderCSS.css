@@ -1,7 +1,6 @@
 
 body {
     display: grid;
-    height: 100vh;
     grid-template-columns: 100%;
     grid-template-rows: 10% 260% 10%;
     background-color: white;
@@ -11,11 +10,14 @@ header {
     
     background-color: white;
     display:flex;
-    height:100vh;
     flex-direction: row;
     justify-content: space-around;
     align-content:flex-end;
     align-items:center;
+}
+
+header.full {
+    height: 110vh;
 }
 
 span {

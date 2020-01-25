@@ -29,11 +29,10 @@ class Gafa {
 }
 
 window.onload = function() {
-
     document.getElementById('x').addEventListener('click', function () {
-        
         if (this.classList.contains('clicked')) {
           this.classList.remove('clicked');
+            document.getElementById("header").classList.add("full");
             document.body.style.backgroundColor = "white";
             document.body.style.opacity = 1;
             
@@ -42,6 +41,7 @@ window.onload = function() {
             document.getElementById("lupa").style.opacity = "1";
         } else {
             var n_gafas = pide();
+            document.getElementById("header").classList.remove("full");
             //Reducción de la opacidad del fondo para simular efecto
             document.body.style.opacity = 0.3;
             document.getElementById("menu2").style.opacity = "1";
@@ -57,9 +57,11 @@ window.onload = function() {
 
 
   function actualizaMenu (n_gafas) {
+    console.log("brilli brilli");
     document.getElementById("m1").innerHTML = "HOME";
     document.getElementById("m2").innerHTML = "LIST (" + n_gafas + ")";
     document.getElementById("m3").innerHTML = "SEARCH";
+    console.log(document.getElementById("m1").innerHTML);
     var n_cesta = recuperaCesta();
     if (n_cesta == null) {
         document.getElementById("m4").innerHTML = "CART (0)";
@@ -75,7 +77,6 @@ window.onload = function() {
 function pide () {
     
     var url = 'http://puigpedros.salle.url.edu/pwi/glasses/api/list/' + token;
-    
     function get(url) {
 
         fetch(url)
