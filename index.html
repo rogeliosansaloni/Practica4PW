@@ -8,16 +8,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Practica 4</title>
     <style>
-    #header {
-        overflow: hidden;
-    }
+        body{
+            display:grid;
+            height: 100vh;
+            grid-template-columns: 100%;
+            grid-template-rows: 7% 78% 10%;
+            overflow-y: hidden;
+        }
+        #header {
+            overflow: hidden;
+        }
+
+        #list {
+            height: 100%;
+        }
+
+
     </style>
 </head>
 <body >
     <iframe id="header" scrolling="no" src="./HTML/Header.html" width="100%" height="40vh" frameborder="0"></iframe>
-    <br>
-    <iframe src="./HTML/List.html" width="100%" frameborder="0"></iframe>
-    <br>
-    <iframe src="./HTML/Footer.html" scrolling="no" width="100%" height="100vh" frameborder="0"></iframe>
+
+    <iframe id="list" src="./HTML/List.html" width="100%" frameborder="0"></iframe>
+
+    <iframe id="footer" src="./HTML/Footer.html" scrolling="no" width="100%" height="100vh" frameborder="0"></iframe>
+
+    <script>
+        document.getElementById("header").addEventListener('load',function(e){
+            document.getElementById("header").contentWindow.document.getElementById("x").addEventListener("click", () => {
+                console.log("holi");
+            })
+        });
+    </script>
 </body>
 </html>

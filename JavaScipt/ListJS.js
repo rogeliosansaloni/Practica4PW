@@ -141,8 +141,9 @@ function muestraDetalle (detalle) {
     tituloPrincipal.className = "tituloPrincipal";
     cabecera.appendChild(tituloPrincipal);
     //creamos el boton like
-    var like = document.createElement("IMG");
-    like.src = "../Icons/corazon.svg";
+    var like = document.createElement("object");
+    like.type="image/svg+xml";
+    like.src = "../images/corazon.svg";
     like.className = "like";
     cabecera.appendChild(like);
     gafaDetalle.appendChild(cabecera);

@@ -132,6 +132,11 @@
     font-size: var(--tam-col-2);
 }
 
+.like {
+    stroke: white !important;
+    width: 100px;
+}
+
 @media screen and (min-width: 800px) and (max-width: 1200px) { 
     .items .item{
         display: flex;
