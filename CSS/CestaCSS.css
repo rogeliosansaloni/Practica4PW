@@ -1,0 +1,205 @@
+:root {
+    --maincolor: #939393;
+  }
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.content main{
+    display: inline-block;
+}
+
+.content footer{
+    display: inline-block;
+}
+.selected{
+    fill: red !important;
+}
+
+.normal{
+    fill: var(--maincolor);
+}
+
+.title{
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 0.01px;
+    font-size: 60px;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+}
+
+#header *{
+    display: inline-block;
+    margin: auto;
+}
+
+#subtitle {
+    color: var(--maincolor);
+    margin-left: 50px;
+}
+
+.data{
+    background-color: #DEDEDE;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 50px;
+    margin: 50px;
+    padding: 30px;
+}
+
+.data *{
+    display: inline-block;
+}
+
+.amount {
+    grid-column: 1 / span 2;
+    width: 150px;
+    height: 100px;
+    margin: auto;
+    border-radius: 20%;
+}
+
+.picutre {
+    grid-column: 3 / span 2;
+    width:100%;
+    margin: auto;
+}
+
+.title.name {
+    grid-column: 1 / span 3;
+    font-size: 40px;
+    color: var(--maincolor);
+    margin: auto;
+}
+
+.title.price {
+    font-size: 50px;
+    color: var(--maincolor);
+    margin: auto;
+}
+
+.discount label{
+    margin-left: 50px;
+    margin-top: 20px;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 0.01px;
+    font-size: 30px;
+    color: --maincolor;
+    font-weight: bolder;
+}
+
+.discount input{
+    background-color: var(--maincolor);
+    border-radius: 10px;
+    color: orangered;
+    margin: 50px;
+    height: 80px;
+    font-size: 40px;
+    width: 90%;
+}
+
+.discount input::placeholder{
+    color: orangered;
+    text-align: right;
+    font-size: 40px;
+}
+
+.total{
+    margin-left: 20%;
+    margin-right: 50px;
+}
+
+.total *{
+    display: inline-block;
+}
+
+.total label{
+    margin-right: 10px;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 0.01px;
+    font-size: 30px;
+    color: var(--maincolor);
+    font-weight: bolder;
+}
+
+.total input{
+    background-color: var(--maincolor);
+    border-radius: 10px;
+    color: orangered;
+    height: 80px;
+    font-size: 40px;
+    width: 85%;
+}
+
+.checkout{
+    background-color: orangered;
+    color: white;
+    margin: 50px;
+    width: 90%; 
+    height: 80px;
+    border-radius: 10px;   
+    border: none;
+    transition: background-color 2s;
+}
+
+.checkout:focus{
+    background-color: maroon;
+}
+
+.nav li{
+    display: inline-block;
+}
+
+.nav li:first-child{
+    margin-left: 70px;
+}
+
+svg {
+    width:20vw;
+}
+
+@media only screen and (min-width : 1025px) {
+    .data{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .amount {
+        grid-column: 1;
+        width: 90%;
+        height: 100px;
+        margin: auto;
+        border-radius: 30px;
+    }
+    
+    .picutre {
+        grid-column: 1;
+        width:100%;
+        margin: auto;
+    }
+    
+    .title.name {
+        grid-column: 1;
+        font-size: 90px;
+        color: var(--maincolor);
+        margin: auto;
+    }
+    
+    .title.price {
+        grid-column: 1;
+        font-size: 50px;
+        color: var(--maincolor);
+        margin: auto;
+    }
+
+
+ }

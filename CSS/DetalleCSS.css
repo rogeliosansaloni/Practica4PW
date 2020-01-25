@@ -1,0 +1,344 @@
+:root{
+    --font-family: 'Segoe UI';
+    --color-letra: white;
+    --tam-1: 14px;
+    --tam-2: 26px;
+    --color-naranja: rgb(240, 115, 12);
+    --color-boton-hover: rgb(255, 94, 0);
+    --color-letra-2: grey;
+    --color-letra-3: black;
+}
+
+.grafica {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70px auto 70px;
+}
+
+.grafica.header {
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grafica.detalle{
+    grid-row: 2;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.grafica.footer {
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.grafica .icono{
+    width: 40px;
+    height: 40px;
+}
+
+.grafica .logo{
+    width: 120px;
+    height: 40px;
+}
+
+.detalle .itemDetalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    border-radius: 25px;
+    padding-bottom: 120px;
+    font-family: var(--font-family);
+}
+
+.itemDetalle.red{
+    background-color: rgb(192, 96, 89);
+}
+
+.itemDetalle .cabecera{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+.cabecera .tituloPrincipal{
+    display: flex;
+    justify-content: flex-start;
+    font-family: var(--font-family);
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--color-letra);
+    padding-left: 35px;
+}
+
+.cabecera .like{
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-naranja);
+    padding: 15px;
+}
+
+.itemDetalle .gafas{
+    display:flex;
+    justify-content:center;
+}
+
+.gafas .imagenGafasDetalle{
+    width: 70%;
+    height: 70%;
+    animation-name: zoom;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+  }
+
+.itemDetalle .tableItemDetalle{
+    display: flex;
+    width: 100%;
+    border: none;
+    font-family: var(--font-family);
+    color: var(--color-letra);
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.tableItemDetalle .fila1t1{
+    font-size: var(--tam-1);
+    color: var(--color-letra);
+    font-weight: lighter;
+    padding-left: 30px;
+    padding-right: 160px;
+}
+
+.tableItemDetalle .fila2t1{
+    font-size: var(--tam-2);
+    color: var(--color-letra);
+    font-weight: normal;
+    padding-left: 30px;
+    padding-right: 160px;
+}
+
+.fila2t1 .select{
+    font-size: var(--tam-2);
+    color: var(--color-letra);
+    font-weight: normal;
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+    text-align-last: center;
+}
+
+.select .option{
+    color: black;
+    text-align: center;
+}
+
+.itemDetalle .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 25px;
+    width: 65%;    
+}
+
+.info .filaBotones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+}
+
+.filaBotones .botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+}
+
+.botones .boton {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-naranja);
+    font-size: 24px;
+    color:var(--color-letra);
+    border:none;
+    border-radius: 10px;
+    width:40%;
+    padding: 10px;
+}
+
+.boton:hover {
+    background-color: var(--color-boton-hover);
+    font-size: 27px;
+    padding: 16px 26px;
+}
+
+.info .titulo{
+    display:flex;
+    justify-content: flex-start;
+    padding-top: 25px;
+    padding-left: 35px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-letra-2);
+}
+
+.info .tablaDetails{
+    display: flex;
+    width: 100%;
+    border: none;
+    justify-content: flex-start;
+    padding-left: 35px;
+    padding-top: 10px;
+    font-family: var(--font-family);
+}
+
+.tablaDetails .fila1t2{
+    display: flex;
+    justify-content: flex-start;
+    font-size: var(--tam-2);
+    color: var(--color-letra-3);
+    font-weight: bold;
+}
+
+.tablaDetails .fila2t2{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: var(--tam-1);
+    color: var(--color-letra-2);
+}
+
+.fila1t2 .celda{
+    padding-right: 100px;
+}
+
+.fila2t2 .celda{
+    padding-right: 80px;
+}
+
+.info .texto{
+    display:flex;
+    justify-content: flex-start;
+    padding-left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 35px;
+    color: var(--color-letra-3);
+    font-family: var(--font-family);
+}
+
+@media screen and (max-width: 800px) { 
+    
+    .grafica {
+        width: 800px;
+    }
+    
+    .detalle .item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 25px;
+        padding-bottom: 0px;
+        font-family: var(--font-family);
+    }
+
+    .item .cabecera{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .cabecera .tituloPrincipal{
+        display: flex;
+        justify-content: flex-start;
+        font-size: 48px;
+        font-weight: bold;
+        padding-left: 35px;
+        font-family: var(--font-family);
+        color: var(--color-letra);
+    }
+    
+    .item .gafas{
+        display:flex;
+        justify-content:center;
+    }
+    
+    .item .tableItem{
+        display: flex;
+        width: 100%;
+        border: none;
+        justify-content: flex-start;
+        padding-bottom: 20px;
+        font-family: var(--font-family);
+        color: var(--color-letra);
+    }
+    
+    .fila2t1 .select{
+        font-weight: normal;
+        background-color: transparent;
+        border: transparent;
+        text-align: center;
+        text-align-last: center;
+        font-size: var(--tam-2);
+        color: var(--color-letra);
+    }
+    
+    .item .info{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 25px;
+        width: 100%; 
+    }
+
+    .info .boton{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .boton #botonBuy {
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        border:none;
+        padding: 14px 24px;
+        width: 20%;
+        border-radius: 10px;
+        background-color: var(--color-naranja);
+        color:var(--color-letra);
+    }
+    
+    .boton #botonBuy:hover {
+        font-size: 27px;
+        padding: 16px 26px;
+        background-color: var(--color-boton-hover);
+    }
+}

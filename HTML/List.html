@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Rogelio Sansaloni Sanjuan">
+        <meta name="keywords" content="Práctica 3">
+        <meta name="description" content="Realizacion de la Practica 3 de Proyectos Web I.">
+        <meta name="googlebot" content="noindex">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Practica 3</title>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="../CSS/ResetSCSS.css" >
+        <link rel="stylesheet" type="text/css" href="../CSS/ListadoCSS.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/DetalleCSS.css">
+        <script src="../JavaScipt/Practica3.js"></script>
+    </head>
+    <!-- Dividiremos los diferentes productos usando article -->
+    <body onload = "extraeListado();">
+        <section id="body" class="grafica body">
+            <ul class="menu">
+                <li class="opcion">ALL</li>
+                <li class="opcion">CLASSIC</li>
+                <li class="opcion">NEW</li>
+                <li class="opcion">CHIC</li>
+                <li class="opcion">GRAND</li>
+                <li class="opcion">ORIGINAL</li>
+            </ul>
+        </section>
+        <div class = "grafica body" id = "listado"></div>
+        <div class = "grafica detalle" id = "detalle"></div>
+    </body>
+</html>

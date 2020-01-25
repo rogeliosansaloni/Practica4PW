@@ -1,0 +1,104 @@
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 260% 10%;
+    background-color: white;
+}
+
+header {
+    
+    background-color: white;
+    display:flex;
+    height:100vh;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content:flex-end;
+    align-items:center;
+}
+
+span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 0px;
+    -webkit-transition: all .3s ease, -webkit-transform .2s ease;
+            transition: all .3s ease, transform .2s ease;
+    background: -webkit-linear-gradient(top, transparent 0%, transparent 20%, #2E313C 20%, #2E313C 23%, transparent 23%, transparent 48%, #2E313C 48%, #2E313C 50%, transparent 47%, transparent 76%, #2E313C 76%, #2E313C 78%, transparent 78%), -webkit-linear-gradient(transparent, transparent);
+    background: linear-gradient(to bottom, transparent 0%, transparent 20%, #2E313C 20%, #2E313C 23%, transparent 23%, transparent 48%, #2E313C 48%, #2E313C 50%, transparent 47%, transparent 76%, #2E313C 76%, #2E313C 78%, transparent 78%), linear-gradient(transparent, transparent);
+  }
+
+  span.clicked {
+    background: -webkit-linear-gradient(135deg, transparent 0%, transparent 48%, #2E313C 49%, #2E313C 51%, transparent 51%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 48%, #2E313C 49%, #2E313C 51%, transparent 51%, transparent 100%);
+    background: linear-gradient(-45deg, transparent 0%, transparent 48%, #2E313C 49%, #2E313C 51%, transparent 51%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 48%, #2E313C 49%, #2E313C 51%, transparent 51%, transparent 100%);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);            
+
+}
+  
+
+main {
+    
+    display:flex;
+    flex-direction: column;
+    margin-top:20px;
+    align-content: center;
+    align-items: flex-start;
+    
+}
+
+#menu2{
+    margin-left: 20%;
+    margin-top:2%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    right: 0;
+    top: 200px;
+    opacity: 0;
+}
+
+p {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+footer {
+    height: 100vh;
+    background-color: white;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    position:relative;
+    
+}
+
+@media only screen and (min-width: 1200px){
+    body{
+        grid-template-columns: 100%;
+        grid-template-rows: 5% 40% 5%;
+        height: 200vh;
+    }
+    
+    header{
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #menu2{
+        margin-left: 15%;
+        width:1050px;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+}

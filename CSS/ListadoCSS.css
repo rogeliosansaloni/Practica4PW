@@ -1,0 +1,173 @@
+
+:root{
+    --font-family: 'Segoe UI';
+    --color: white;
+    --new-height: 350px;
+    --tam-col-1: 20px;
+    --tam-col-2: 32px;
+}
+
+.grafica {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70px auto 70px;
+}
+
+.grafica.header {
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grafica.body{
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.grafica.footer {
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.grafica .icono{
+    width: 40px;
+    height: 40px;
+}
+
+.grafica .logo{
+    width: 120px;
+    height: 40px;
+}
+
+.body .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(255, 171, 115); 
+    padding-top: 15px;
+    padding-bottom: 15px;
+    list-style: none; 
+}
+
+.menu .opcion{
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    font-family: var(--font-family);
+}
+
+.opcion:hover{
+    color: rgb(129, 37, 0);
+}
+
+.body #listado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.body .items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.items .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 350px;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+.item .imagenGafas{
+    width: 70%;
+    height: 80%;
+}
+
+.item:hover{
+    justify-content: space-around;
+}
+
+.item .link{
+    display: none;
+}
+
+.item:hover .link{
+    display:flex;
+    color:white;
+    font-style: italic;
+    text-decoration: none;
+    font-size: var(--tam-col-1);
+    font-family: var(--font-family);
+}
+
+.item:hover .link:hover{
+    text-decoration: underline;
+}
+
+.item .tableItem{
+    width: 100%;
+    border: none;
+    font-size: var(--tam-col-1);
+    font-family: var(--font-family);
+    color: var(--color);
+}
+
+.tableRow .columnaItem{
+    font-weight: normal;
+    font-size: var(--tam-col-2);
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) { 
+    .items .item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 45%;
+        height: 350px;
+        margin: 20px;
+        border-radius: 25px;
+    }
+
+    .menu .opcion{
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        font-family: var(--font-family);
+    }
+}
+
+@media screen and (max-width: 800px) { 
+    .items .item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+        margin: 20px;
+        border-radius: 25px;
+    }
+
+    .menu .opcion{
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        font-family: var(--font-family);
+    }
+}
