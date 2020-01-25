@@ -1,0 +1,48 @@
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content:center;
+
+}
+
+.sub{
+    color: dimgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.super{
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    font-weight: lighter;
+}
+
+.input {
+    display:flex;
+    flex-direction: column;
+}
+
+.botones{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-content:center;
+
+
+}
+
+#botonPaypal {
+
+}
+
+#botonVisa {
+
+}
+
+.total{
+    display:flex;
+    flex-direction: column;
+}
