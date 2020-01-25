@@ -26,7 +26,7 @@
 
         #header {
             overflow: hidden;
-            padding-top: 10px;
+
         }
 
         #list {
@@ -38,15 +38,28 @@
     </style>
 </head>
 <body class="initialBody">
-    <iframe id="header" src="./HTML/Header.html" width="100%" height="100%" frameborder="0"></iframe>
+    <iframe id="header" src="./HTML/Header.html" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
 
     <iframe id="list" src="./HTML/List.html" width="100%" frameborder="0"></iframe>
 
     <iframe id="footer" src="./HTML/Footer.html" scrolling="no" width="100%" height="100vh" frameborder="0"></iframe>
 
     <script>
+
         document.getElementById("header").addEventListener('load',function(e){
             let doc = document.getElementById("header").contentWindow.document;
+            doc.getElementById("logo").addEventListener("click", () => {
+               document.location.reload();
+            });
+
+            doc.getElementById("m1").addEventListener("click", () => {
+                document.location.reload();
+            });
+
+            doc.getElementById("m5").addEventListener("click", () => {
+                document.location.reload();
+            });
+
             doc.getElementById("x").addEventListener("click", () => {
                 console.log("holi");
 
@@ -61,7 +74,12 @@
                 }
             })
         });
+
         document.getElementById("list").addEventListener('load', function(e){
+
+            document.getElementById("list").contentWindow.botonBuy = () => {
+
+            };
             console.log("a");
             document.getElementById("list").contentWindow.openDetails =  () => {
                 console.log("Brilli Brilli");

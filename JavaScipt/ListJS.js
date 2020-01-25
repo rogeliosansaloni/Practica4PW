@@ -44,6 +44,10 @@ class GafaDetalle{
 
 }
 
+
+var botonBuy = () => {
+};
+
 var openDetails = () => {};
 
 function extraeListado(){
@@ -205,17 +209,31 @@ function muestraDetalle (detalle) {
     //Section boton
     var botones = document.createElement("SECTION");
     botones.className = "botones";
+
+
     //Button BUY
     //Creamos la cesta
-    var cesta = JSON.parse(localStorage.getItem('cesta'));
+
+    var cesta = JSON.parse(localStorage.getItem('Cesta'));
     if(cesta === null){
-        cesta = new Array();
+        cesta = new Array(0);
     }
+
     function añadirCesta(id) {
-        cesta.push(id);
+        let indice = cesta.findIndex((e) => {
+            return e["id"] === id;
+        },0);
+
+        if (indice < 0) {
+            cesta.push({id:id, qty:1});
+        } else {
+            cesta[indice].qty++;
+        }
+
         //añadimos la cesta al localStorage
         localStorage.clear();
-        localStorage.setItem('cesta', JSON.stringify(cesta));
+        localStorage.setItem('Cesta', JSON.stringify(cesta));
+        console.log(cesta);
     }
     
     var buttonBuy = document.createElement('BUTTON');
@@ -223,6 +241,9 @@ function muestraDetalle (detalle) {
     buttonBuy.addEventListener("click", function(){añadirCesta(id)});
     buttonBuy.className = "boton";
     buttonBuy.appendChild(document.createTextNode("BUY"));
+    buttonBuy.addEventListener('click', () => {
+        botonBuy();
+    });
     botones.appendChild(buttonBuy);
     //Button ATRÁS
     function cambiaListado() {

@@ -58,7 +58,6 @@ window.onload = function() {
 
 
   function actualizaMenu (n_gafas) {
-    console.log("brilli brilli");
     document.getElementById("m1").innerHTML = "HOME";
     document.getElementById("m2").innerHTML = "LIST (" + n_gafas + ")";
     document.getElementById("m3").innerHTML = "SEARCH";
@@ -108,17 +107,15 @@ function pide () {
 function recuperaCesta () {
     var cesta_json = localStorage.getItem('Cesta');
     if (cesta_json == null) {
-        alert ("No hay ninguna cesta");
+        return null;
     } else {
         var cesta_obj = JSON.parse(cesta_json);
-
-        var numero = 0;
-        for (var i = 0; i < cesta_obj.length; i++) {
-            numero += cesta_obj [i][1];
-        }
-        return numero;
+        return cesta_obj.length;
     }
-    return null;
+
+
+
+
     
 }
 

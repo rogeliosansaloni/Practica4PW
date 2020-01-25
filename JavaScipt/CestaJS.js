@@ -46,7 +46,7 @@ class Gafas{
 };
 
 try{
-    let localData = JSON.parse(localStorage.getItem("carrito"));
+    let localData = JSON.parse(localStorage.getItem("Cesta"));
     let gafas = [];
     let promises = [];
     localData.forEach((gafa) => {

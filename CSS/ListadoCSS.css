@@ -138,6 +138,10 @@
 }
 
 @media screen and (min-width: 800px) and (max-width: 1200px) { 
+    body{
+        background-color: red;
+
+    }
     .items .item{
         display: flex;
         flex-direction: column;
@@ -157,7 +161,11 @@
     }
 }
 
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 800px) {
+    body{
+        background-color: pink;
+
+    }
     .items .item{
         display: flex;
         flex-direction: column;
