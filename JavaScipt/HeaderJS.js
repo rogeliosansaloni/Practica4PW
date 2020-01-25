@@ -27,7 +27,7 @@ class Gafa {
         this.bgColor = data_gafa.bgColor;
     }
 }
-/*
+
 window.onload = function() {
 
     document.getElementById("x").addEventListener('click', function () {
@@ -55,7 +55,7 @@ window.onload = function() {
       });
 
 }
-*/
+
 
   function actualizaMenu (n_gafas) {
     console.log("brilli brilli");

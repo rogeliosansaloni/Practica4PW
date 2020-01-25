@@ -61,15 +61,25 @@
                 }
             })
         });
-
+        let amountLink = 0;
         document.getElementById("list").addEventListener('load', function(e){
             console.log("a");
             let linkDoc = document.getElementById("list").contentWindow.document;
             console.log(linkDoc);
-            linkDoc.
-            linkDoc.getElementById("link").addEventListener("click", () => {
-                console.log("eh");
+            amountLink = linkDoc.getElementsByClassName("link").length;
+            if(amountLink){
+                //TODO wait for custom event;
+            }
+            const observer = new MutationObserver((mutationList,observer) => {
+                console.log(mutationList);
+                if(amountLink !== linkDoc.getElementsByClassName("link").length){
+                    amountLink = linkDoc.getElementsByClassName("link").length;
+                    //TODO custom event;
+                }
             });
+            const config = {attributes: true, childList: true, subtree: true};
+
+            observer.observe(linkDoc,config);
 
         });
 
