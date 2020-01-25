@@ -44,6 +44,8 @@ class GafaDetalle{
 
 }
 
+var openDetails = () => {};
+
 function extraeListado(){
     const token = '5e18ba3a6b97a';
     const url_listado= 'http://puigpedros.salle.url.edu/pwi/glasses/api/list/' + token;
@@ -113,7 +115,8 @@ function muestraListado (listado) {
     history.pushState(historial, "", "#listado");
 }
 
-function extraeDetalle (id) { 
+function extraeDetalle (id) {
+    openDetails();
     const token = '5dffb1e5acd7b';
     var url_detalle= 'http://puigpedros.salle.url.edu/pwi/glasses/api/detail/' + token + '/' + id;
     fetch(url_detalle)
