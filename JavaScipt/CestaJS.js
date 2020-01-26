@@ -79,8 +79,8 @@ try{
                 });
             });
             localStorage.setItem('precioTotal', JSON.stringify(price));
-            document.getElementById("payment").style.display = 'block';
-            document.getElementById("cart").style.display = 'none';
+            document.getElementById("cart").classList.add("gone");
+            document.getElementById("payment").classList.remove("gone");
             cambioFormulario();
         });
     });

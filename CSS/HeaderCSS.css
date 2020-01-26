@@ -67,7 +67,6 @@ p {
     justify-content: space-between;
     align-items:center;
     position:relative;
-    margin-top:10%;
     height: 300px;
     
 }
@@ -94,6 +93,6 @@ p {
 
     }
     #footer {
-        margin-top:10%;
+        margin-top:4%;
     }
 }

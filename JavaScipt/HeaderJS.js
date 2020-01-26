@@ -1,11 +1,3 @@
-var fichero;
-
-//Array con la información de todas las gafas del listado
-var array_gafas;
-
-const token = '5e18ba3a6b97a';
-
-
 fetch('http://puigpedros.salle.url.edu/pwi/glasses/api/list/' + token)
 .then(function(response) {
     return response.json();
@@ -122,4 +114,3 @@ function recuperaCesta () {
         return r;
     }
 }
-

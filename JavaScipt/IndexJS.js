@@ -28,7 +28,7 @@
     });
 
     document.getElementById("m4").addEventListener("click", () => {
-        window.location.replace("../HTML/Cesta.html");
+        window.location.href = "../HTML/Cesta.html";
     });
 /*
     document.getElementById("x").addEventListener("click", () => {

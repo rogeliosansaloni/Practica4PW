@@ -35,59 +35,61 @@
     </div>
 
 
+    <div id="contenido">
+        <main class="main content" id="cart">
+            <article itemscope itemtype="http://schema.org/Order">
+                <h1 class="title" id="subtitle">CART</h1>
+                <form>
+                    <div id="CartElements">
 
-    <main class="content main" id="cart">
-        <article itemscope itemtype="http://schema.org/Order">
-            <h1 class="title" id="subtitle">CART</h1>
-            <form>
-                <div id="CartElements">
+                    </div>
 
-                </div>
-
-                <section class="discount">
-                    <label for="discode">DISCOUNT CODE</label>
-                    <input type="text" placeholder="APPLY" id="discode" itemprop="discountCode" />
-                </section>
-                <section class="total">
-                    <label for="total">TOTAL</label>
-                    <input type="text" value="0€" disabled id="total" itemprop="price">
-                </section>
-                <button id="check" class="checkout" type="button">CHECK OUT</button>
-            </form>
-        </article>
-    </main>
-
-
+                    <section class="discount">
+                        <label for="discode">DISCOUNT CODE</label>
+                        <input type="text" placeholder="APPLY" id="discode" itemprop="discountCode" />
+                    </section>
+                    <section class="total">
+                        <label for="total">TOTAL</label>
+                        <input type="text" value="0€" disabled id="total" itemprop="price">
+                    </section>
+                    <button id="check" class="checkout" type="button">CHECK OUT</button>
+                </form>
+            </article>
+        </main>
 
 
-    <form clas="payment" id="payment" action="">
-        <label class="super">PAYMENT</label>
-        <div class="input">
-            <label class="sub" for="address">ADDRESS</label>
-            <input class="rellenar" type="text" id="address" onkeypress="return keyPressed(event)"/>
-        </div>
 
-        <div class="input">
-            <label class="sub" for="shipping">SHIPPING</label>
-            <input class="rellenar" type="text" id="shipping"/>
-        </div>
 
-        <div class="input">
-            <label class="sub">PAYMENT METHOD</label>
-            <div class="botones">
-                <button id="botonVisa" type="button"><img id="logoVisa" src="../images/visaLogo.png"></button>
-                <button id="botonPaypal" type="button"><img id="logoPaypal" src="../images/paypalLogo.png"></button>
+        <form class="payment gone" id="payment" action="">
+            <label class="super">PAYMENT</label>
+            <div class="input">
+                <label class="sub" for="address">ADDRESS</label>
+                <input class="rellenar" type="text" id="address" onkeypress="return keyPressed(event)"/>
             </div>
-        </div>
 
-        <div class="input total">
-            <label class="sub" for="precio">TOTAL</label>
-            <div id="precio"></div>
-        </div>
+            <div class="input">
+                <label class="sub" for="shipping">SHIPPING</label>
+                <input class="rellenar" type="text" id="shipping"/>
+            </div>
 
-        <button id="botonComplete" type="button">COMPLETE</button>
+            <div class="input">
+                <label class="sub">PAYMENT METHOD</label>
+                <div class="botones">
+                    <button id="botonVisa" type="button"><img id="logoVisa" src="../images/visaLogo.png"></button>
+                    <button id="botonPaypal" type="button"><img id="logoPaypal" src="../images/paypalLogo.png"></button>
+                </div>
+            </div>
 
-    </form>
+            <div class="input total">
+                <label class="sub" for="precio">TOTAL</label>
+                <div id="precio"></div>
+            </div>
+
+            <button id="botonComplete" type="button">COMPLETE</button>
+
+        </form>
+    </div>
+
 
     <footer id="footer">
         <img src="../images/brujula.svg" width="40" height="40" alt="brujula">
@@ -98,6 +100,8 @@
 
     <script src="../JavaScipt/FormJS.js"></script>
     <script src="../JavaScipt/CestaJS.js" ></script>
+    <script src="../JavaScipt/HeaderJS.js"></script>
+
 </body>
 
 </html>

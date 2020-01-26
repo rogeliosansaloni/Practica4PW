@@ -53,11 +53,13 @@ var openDetails = () => {};
 function extraeListado(){
     const token = '5e18ba3a6b97a';
     const url_listado= 'http://puigpedros.salle.url.edu/pwi/glasses/api/list/' + token;
+    console.log(url_listado);
     fetch(url_listado)
         .then(function(response) {
             return response.json();  
         })
         .then(function(listado) {
+            console.log(listado);
             muestraListado(listado);
     });
 }
@@ -247,7 +249,9 @@ function muestraDetalle (detalle) {
     botones.appendChild(buttonBuy);
     //Button ATRÁS
     function cambiaListado() {
-        return function() {extraeListado()};
+        return function() {
+            extraeListado()
+        };
     }
     var buttonBack = document.createElement('BUTTON');
     buttonBack.className = "boton";
@@ -325,3 +329,4 @@ function muestraDetalle (detalle) {
     var historial = {foo: "bar"};
     history.pushState(historial, "", "#detalle");
 }
+extraeListado();

@@ -16,32 +16,9 @@ body.bigHeader{
 
 #header {
     overflow: hidden;
-
 }
 
 #list {
     height: 100%;
     overflow: hidden;
-}
-
-iframe.floatingHeader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
-
-iframe.floatingFooter{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-}
-
-iframe.body{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: 1;
 }

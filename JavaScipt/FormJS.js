@@ -5,9 +5,6 @@ let paypal = false;
 let visa = false;
 let itemBorrado = false;
 
-var vuelta = () => {
-
-};
 function keyPressed(event){
     if(event.keyCode === 13){
         document.getElementById("address").value = paisActual;
@@ -52,7 +49,9 @@ function comprobarComplete(){
         console.log("esto si");
         localStorage.removeItem("Cesta");
         localStorage.removeItem("precioTotal");
-        vuelta();
+        document.getElementById("cart").classList.remove("gone");
+        document.getElementById("payment").classList.add("gone");
+        window.location.href = "../HTML/index.html";
     }
 }
 
