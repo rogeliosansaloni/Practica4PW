@@ -7,57 +7,7 @@
     <meta name="author" content="Bernardo Nouel, Sandra Cea, Rogelio Sansaloni">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Practica 4</title>
-    <style>
-        body.initialBody{
-            display:grid;
-            height: 100vh;
-            grid-template-columns: 100%;
-            grid-template-rows: 7% 78% 10%;
-            overflow-y: hidden;
-        }
-
-        body.bigHeader{
-            display:grid;
-            height: 100vh;
-            grid-template-columns: 100%;
-            grid-template-rows: 85% 0 10%;
-            overflow-y: hidden;
-        }
-
-        #header {
-            overflow: hidden;
-
-        }
-
-        #list {
-            height: 100%;
-            overflow: hidden;
-        }
-
-        iframe.floatingHeader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
-
-        iframe.floatingFooter{
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            z-index: 2;
-        }
-
-        iframe.body{
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            z-index: 1;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="./CSS/IndexCSS.css" />
 </head>
 <body class="initialBody">
     <iframe id="header" src="./HTML/Header.html" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
@@ -66,84 +16,6 @@
 
     <iframe id="footer" src="./HTML/Footer.html" scrolling="no" width="100%" height="100vh" frameborder="0"></iframe>
 
-    <script>
-
-        document.getElementById("header").addEventListener('load',function(e){
-            let doc = document.getElementById("header").contentWindow.document;
-
-            doc.getElementById("logo").addEventListener("click", () => {
-                document.getElementById("list").src = "./HTML/List.html";
-                document.getElementById("list").addEventListener('load',() => {
-                    document.location.reload();
-                });
-            });
-
-            doc.getElementById("m1").addEventListener("click", () => {
-                document.getElementById("list").src = "./HTML/List.html";
-                document.getElementById("list").addEventListener('load',() => {
-                    document.location.reload();
-                });
-                //document.location.reload();
-            });
-            doc.getElementById("m5").addEventListener("click", () => {
-                document.getElementById("list").src = "./HTML/List.html";
-                document.getElementById("list").addEventListener('load',() => {
-                    document.location.reload();
-                });
-            });
-
-            doc.getElementById("m2").addEventListener("click", () => {
-                document.getElementById("list").src = "./HTML/List.html";
-                document.getElementById("list").addEventListener('load',() => {
-                    document.location.reload();
-                });
-            });
-
-            doc.getElementById("m4").addEventListener("click", () => {
-               document.getElementById("list").src = "./HTML/Cesta.html";
-                document.getElementById("list").addEventListener('load',() => {
-                    document.location.reload();
-
-                });
-
-
-
-            });
-
-
-            doc.getElementById("x").addEventListener("click", () => {
-
-                if(document.body.classList.contains("initialBody")){
-                    document.body.classList.remove("initialBody");
-                    document.body.classList.add("bigHeader");
-                    document.getElementById("header").height = "100%";
-                }else{
-                    document.body.classList.remove("bigHeader");
-                    document.body.classList.add("initialBody");
-                    document.getElementById("header").height = "40vh";
-                }
-            })
-        });
-
-        document.getElementById("list").addEventListener('load', function(e){
-
-            document.getElementById("list").contentWindow.botonBuy = () => {
-
-            };
-            document.getElementById("list").contentWindow.checkout = () => {
-
-                document.getElementById("list").src = "./HTML/Form.html";
-                document.getElementById("list").addEventListener('load',() => {
-                    document.location.reload();
-
-                });
-
-            };
-
-
-        });
-
-
-    </script>
+    <script src="./JavaScipt/IndexJS.js"></script>
 </body>
 </html>

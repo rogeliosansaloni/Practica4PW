@@ -118,6 +118,7 @@ form{
     display:flex;
     border: none;
     justify-content: center;
+    align-items: center;
     font-family: var(--tipo-letra);
     background-color: var(--color-completa);
     border-radius: var(--borde-rectangulo);

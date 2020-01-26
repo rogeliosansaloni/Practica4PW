@@ -12,7 +12,6 @@ class Gafas{
     }
 
     async loadGlasses(){
-        console.log("http://puigpedros.salle.url.edu/pwi/glasses/api/detail/"+token+"/"+this.id);
         await fetch("http://puigpedros.salle.url.edu/pwi/glasses/api/detail/"+token+"/"+this.id)
         .then((r) => r.json()).then((r)=>{
             this.title = r["data"]["title"];
@@ -61,7 +60,6 @@ try{
     Promise.all(promises).then(()=>{
         let items = document.getElementById("CartElements");
         let price = 0;
-        console.log(gafas);
         gafas.forEach((gafa) => {
             price += gafa.getTotalPrice();
             items.innerHTML +=  gafa.getInnerHTML();

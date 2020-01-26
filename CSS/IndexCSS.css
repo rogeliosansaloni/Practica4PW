@@ -1,0 +1,47 @@
+body.initialBody{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 7% 78% 10%;
+    overflow-y: hidden;
+}
+
+body.bigHeader{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 85% 0 10%;
+    overflow-y: hidden;
+}
+
+#header {
+    overflow: hidden;
+
+}
+
+#list {
+    height: 100%;
+    overflow: hidden;
+}
+
+iframe.floatingHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+iframe.floatingFooter{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+iframe.body{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+}

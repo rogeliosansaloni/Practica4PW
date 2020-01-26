@@ -233,7 +233,6 @@ function muestraDetalle (detalle) {
         //añadimos la cesta al localStorage
         localStorage.clear();
         localStorage.setItem('Cesta', JSON.stringify(cesta));
-        console.log(cesta);
     }
     
     var buttonBuy = document.createElement('BUTTON');
