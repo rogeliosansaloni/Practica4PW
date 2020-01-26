@@ -30,19 +30,28 @@ class Gafa {
 
 window.onload = function() {
 
+    document.getElementById("menu2").style.display = 'none';
+
     document.getElementById("x").addEventListener('click', function () {
         if (this.classList.contains('clicked')) {
           this.classList.remove('clicked');
-            document.getElementById("header").classList.add("full");
+            document.getElementById("head").classList.add("full");
             document.body.style.backgroundColor = "white";
             document.body.style.opacity = 1;
             
             document.getElementById("menu2").style.opacity = "0";
             document.getElementById("logo").style.opacity = "1";
             document.getElementById("lupa").style.opacity = "1";
+            document.getElementById("contenido").style.display = 'block';
+            document.getElementById("menu2").style.display = 'none';
+
+
         } else {
+            document.getElementById("menu2").style.display = 'flex';
+            document.getElementById("contenido").style.display = 'none';
+
             var n_gafas = pide();
-            document.getElementById("header").classList.remove("full");
+            document.getElementById("head").classList.remove("full");
             //Reducción de la opacidad del fondo para simular efecto
             document.body.style.opacity = 0.3;
             document.getElementById("menu2").style.opacity = "1";

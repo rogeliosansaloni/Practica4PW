@@ -8,14 +8,59 @@
     <meta name="author" content="Bernardo Nouel">
     <meta name="robots" content="index,nofollow">
     <link rel="stylesheet" href="../CSS//ResetBCSS.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/HeaderCSS.css" >
     <link rel="stylesheet" href="../CSS/CestaCSS.css">
     <link rel="stylesheet" href="../CSS/FormCSS.css">
     <title>Shopping Cart</title>
 </head>
 
-<body class="content">
+<body >
 
-    <form id="payment" action="">
+    <header class="full" id="head">
+        <span id="x"></span>
+
+        <img id = "logo" src="../images/logo.png" width="120" height="40" alt="logo">
+
+        <img id="lupa" src="../images/busqueda.svg" width="40" height="40" alt="lupa">
+
+    </header>
+
+
+    <div id="menu2" >
+        <p id = "m1"></p>
+        <p id = "m2"></p>
+        <p id = "m3"></p>
+        <p id = "m4"></p>
+        <p id = "m5"></p>
+    </div>
+
+
+
+    <main class="content main" id="cart">
+        <article itemscope itemtype="http://schema.org/Order">
+            <h1 class="title" id="subtitle">CART</h1>
+            <form>
+                <div id="CartElements">
+
+                </div>
+
+                <section class="discount">
+                    <label for="discode">DISCOUNT CODE</label>
+                    <input type="text" placeholder="APPLY" id="discode" itemprop="discountCode" />
+                </section>
+                <section class="total">
+                    <label for="total">TOTAL</label>
+                    <input type="text" value="0€" disabled id="total" itemprop="price">
+                </section>
+                <button id="check" class="checkout" type="button">CHECK OUT</button>
+            </form>
+        </article>
+    </main>
+
+
+
+
+    <form clas="payment" id="payment" action="">
         <label class="super">PAYMENT</label>
         <div class="input">
             <label class="sub" for="address">ADDRESS</label>
@@ -35,39 +80,24 @@
             </div>
         </div>
 
-       <div class="input total">
-           <label class="sub" for="precio">TOTAL</label>
-           <div id="precio"></div>
-       </div>
+        <div class="input total">
+            <label class="sub" for="precio">TOTAL</label>
+            <div id="precio"></div>
+        </div>
 
         <button id="botonComplete" type="button">COMPLETE</button>
 
     </form>
 
-    <main id="cart">
-        <article itemscope itemtype="http://schema.org/Order">
-            <h1 class="title" id="subtitle">CART</h1>
-            <form>
-                <div id="CartElements">
-                    
-                </div>
+    <footer id="footer">
+        <img src="../images/brujula.svg" width="40" height="40" alt="brujula">
+        <img src="../images/str.svg" width="40" height="40" alt="catalogo">
+        <img src="../images/corazon.svg" width="40" height="40" alt="like">
+        <img id="bolso" src="../images/bolso.svg" width="40" height="40" alt="bolso">
+    </footer>
 
-                <section class="discount">
-                    <label for="discode">DISCOUNT CODE</label>
-                    <input type="text" placeholder="APPLY" id="discode" itemprop="discountCode" />
-                </section>
-                <section class="total">
-                    <label for="total">TOTAL</label>
-                    <input type="text" value="0€" disabled id="total" itemprop="price">
-                </section>
-                <button id="check" class="checkout" type="button">CHECK OUT</button>
-            </form>
-        </article>
-    </main>
-    
     <script src="../JavaScipt/FormJS.js"></script>
     <script src="../JavaScipt/CestaJS.js" ></script>
-
 </body>
 
 </html>

@@ -1,7 +1,9 @@
-const token = "5e040aa11910c";
+//const token = "5e040aa11910c";
 
-var checkout = () => {};
-
+window.onload = function () {
+    document.getElementById("payment").style.display = 'none';
+    document.getElementById("menu2").style.display = 'none';
+};
 class Gafas{
     constructor(id,amount){
         this.id = id;
@@ -66,7 +68,9 @@ try{
             gafa.updateTriggers();
         });
 
-        document.getElementById("total").value = ""+price;
+        console.log("e");
+        //document.getElementById("total").value = ""+price;
+
         document.getElementById("check").addEventListener("click",()=>{
             gafas.forEach((gafa) => {
                 fetch("http://puigpedros.salle.url.edu/pwi/glasses/api/remove/" + token, {
@@ -74,9 +78,10 @@ try{
                     body: "{\"id\": \"" + gafa.id + "\"}"
                 });
             });
-            checkout();
             localStorage.setItem('precioTotal', JSON.stringify(price));
-
+            document.getElementById("payment").style.display = 'block';
+            document.getElementById("cart").style.display = 'none';
+            cambioFormulario();
         });
     });
 

@@ -1,43 +1,37 @@
+//EN INDEX ESTA HEADER FOOTER Y LIST
+//document.getElementById("head").addEventListener('load',function(e){
+    //let doc = document.getElementById("head").contentWindow.document;
 
-document.getElementById("head").addEventListener('load',function(e){
-    let doc = document.getElementById("head").contentWindow.document;
+//AL PULSAR LOGO
+    document.getElementById("logo").addEventListener("click", () => {
+        alert("al menos voy");
+        //document.getElementById("list").src = "./HTML/index.html";
+        document.location.reload();
+        //document.getElementById("list").addEventListener('load',() => {
 
-    doc.getElementById("logo").addEventListener("click", () => {
-        document.getElementById("list").src = "./HTML/index.html";
-        document.getElementById("list").addEventListener('load',() => {
-            document.location.reload();
-        });
+        //});
     });
 
-    doc.getElementById("m1").addEventListener("click", () => {
-        document.getElementById("list").src = "./HTML/index.html";
-        document.getElementById("list").addEventListener('load',() => {
-            document.location.reload();
-        });
-        //document.location.reload();
-    });
-    doc.getElementById("m5").addEventListener("click", () => {
-        document.getElementById("list").src = "./HTML/index.html";
-        document.getElementById("list").addEventListener('load',() => {
-            document.location.reload();
-        });
+    document.getElementById("m1").addEventListener("click", () => {
+        //document.getElementById("list").src = "./HTML/index.html";
+        document.location.reload();
     });
 
-    doc.getElementById("m2").addEventListener("click", () => {
-        document.getElementById("list").src = "./HTML/index.html";
-        document.getElementById("list").addEventListener('load',() => {
-            document.location.reload();
-        });
+    document.getElementById("m5").addEventListener("click", () => {
+
+        document.location.reload();
+
     });
 
-    doc.getElementById("m4").addEventListener("click", () => {
-        document.getElementById("list").src = "./HTML/Cesta.html";
-        document.getElementById("list").addEventListener('load',() => {
-            document.location.reload();
-        });
+    document.getElementById("m2").addEventListener("click", () => {
+        document.location.reload();
     });
 
-    doc.getElementById("x").addEventListener("click", () => {
+    document.getElementById("m4").addEventListener("click", () => {
+        window.location.replace("../HTML/Cesta.html");
+    });
+/*
+    document.getElementById("x").addEventListener("click", () => {
 
         if(document.body.classList.contains("initialBody")){
             document.body.classList.remove("initialBody");
@@ -48,9 +42,9 @@ document.getElementById("head").addEventListener('load',function(e){
             document.body.classList.add("initialBody");
             document.getElementById("header").height = "40vh";
         }
-    })
-});
-
+    });
+//});
+/*
 document.getElementById("list").addEventListener('load', function(e){
 
     document.getElementById("list").contentWindow.botonBuy = () => {
@@ -75,4 +69,4 @@ document.getElementById("list").addEventListener('load', function(e){
     }
 
 
-});
+});*/

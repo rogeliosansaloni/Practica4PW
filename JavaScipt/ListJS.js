@@ -63,7 +63,8 @@ function extraeListado(){
 }
 
 
-function muestraListado (listado) { 
+function muestraListado (listado) {
+    document.getElementById("menu2").style.display = 'none';
     //creamos un nodo que contendrá todas las gafas
     var items = document.createElement("SECTION");
     items.className = "items";

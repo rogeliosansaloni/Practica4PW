@@ -49,6 +49,7 @@ function comprobarComplete(){
     else if(!itemBorrado){
         itemBorrado = true;
         document.getElementById("precio").innerHTML = "0 €";
+        console.log("esto si");
         localStorage.removeItem("Cesta");
         localStorage.removeItem("precioTotal");
         vuelta();
@@ -59,10 +60,12 @@ function listenerComplete(){
     document.getElementById("botonComplete").addEventListener("click", comprobarComplete);
 }
 
-let price = localStorage.getItem("precioTotal");
-//todo carrito
-if(price == null) document.getElementById("precio").innerHTML = "0 €";
-else document.getElementById("precio").innerHTML = price + " €";
+function cambioFormulario(){
+    let price = localStorage.getItem("precioTotal");
+    if(price == null) document.getElementById("precio").innerHTML = "0 €";
+    //else document.getElementById("precio").innerHTML = price + " €";
 
-listenersMetodosPago();
-listenerComplete();
+    listenersMetodosPago();
+    listenerComplete();
+}
+
