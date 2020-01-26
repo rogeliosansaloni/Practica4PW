@@ -9,31 +9,29 @@
     <form action="">
         <label class="super">PAYMENT</label>
         <div class="input">
-            <label class="sub" for="ADSRESS">ADDRESSS</label>
-            <input type="text" id="ADSRESS" />
+            <label class="sub" for="ADDRESS">ADDRESS</label>
+            <input class="rellenar" type="text" id="ADDRESS" />
         </div>
-
-        <br/>
 
         <div class="input">
             <label class="sub" for="SHIPPING">SHIPPING</label>
-            <input type="text" id="SHIPPING" />
+            <input class="rellenar" type="text" id="SHIPPING"/>
         </div>
 
         <div class="input">
             <label class="sub">PAYMENT METHOD</label>
             <div class="botones">
-                <button id="botonVisa" type="button"><img src="../images/visaLogo.png"width="150px" height="50px"></button>
-                <button id="botonPaypal" type="button"><img src="../images/paypalLogo.png" width="200px" height="50px"></button>
+                <button id="botonVisa" type="button"><img id="logoVisa" src="../images/visaLogo.png"></button>
+                <button id="botonPaypal" type="button"><img id="logoPaypal" src="../images/paypalLogo.png"></button>
             </div>
         </div>
 
-       <div class="total">
-           <label class="sub" for="TOTAL">TOTAL</label>
-           <input type="number" id="TOTAL" />
+       <div class="input total">
+           <label class="sub" for="precio">TOTAL</label>
+           <div id="precio">255 €</div>
        </div>
 
-        <button type="button">COMPLETE</button>
+        <button id="botonComplete" type="button">COMPLETE</button>
 
     </form>
 </body>
