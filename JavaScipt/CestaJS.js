@@ -1,5 +1,7 @@
 const token = "5e040aa11910c";
 
+var checkout = () => {};
+
 class Gafas{
     constructor(id,amount){
         this.id = id;
@@ -7,15 +9,12 @@ class Gafas{
         this.title = "";
         this.price = "";
         this.image = "";
-        console.log("Test");
     }
 
     async loadGlasses(){
-        console.log("Test2");
         console.log("http://puigpedros.salle.url.edu/pwi/glasses/api/detail/"+token+"/"+this.id);
         await fetch("http://puigpedros.salle.url.edu/pwi/glasses/api/detail/"+token+"/"+this.id)
         .then((r) => r.json()).then((r)=>{
-            console.log(r);
             this.title = r["data"]["title"];
             this.price = r["data"]["price"];
             this.image = r["data"]["images"][0];
@@ -43,37 +42,44 @@ class Gafas{
         return this.price*this.amount;
     }
     
-};
+}
 
 try{
     let localData = JSON.parse(localStorage.getItem("Cesta"));
     let gafas = [];
     let promises = [];
-    localData.forEach((gafa) => {
-        var gaf = new Gafas(gafa.id,gafa.qty);
-        promises.push(gaf.loadGlasses());
-        gafas.push(gaf);
-    });
+
+    //SANDRA
+    if (localData != null) {
+        localData.forEach((gafa) => {
+            var gaf = new Gafas(gafa.id,gafa.qty);
+            promises.push(gaf.loadGlasses());
+            gafas.push(gaf);
+        });
+    }
+
     Promise.all(promises).then(()=>{
         let items = document.getElementById("CartElements");
         let price = 0;
         console.log(gafas);
         gafas.forEach((gafa) => {
             price += gafa.getTotalPrice();
-            items.innerHTML += items.innerHTML + gafa.getInnerHTML();
+            items.innerHTML +=  gafa.getInnerHTML();
             gafa.updateTriggers();
         });
+
         document.getElementById("total").value = ""+price;
-        document.getElementById("checkoutbutton").addEventListener("onclick",()=>{
+        document.getElementById("check").addEventListener("click",()=>{
             gafas.forEach((gafa) => {
-               fetch("http://puigpedros.salle.url.edu/pwi/glasses/api/remove/"+token,{
+                fetch("http://puigpedros.salle.url.edu/pwi/glasses/api/remove/" + token, {
                     method: "POST",
-                    body: "{\"id\": \""+gafa.id+"\"}"
+                    body: "{\"id\": \"" + gafa.id + "\"}"
                 });
-                localStorage.removeItem("carrito");
-                //Change to homepage 
-            })
-        },false);
+            });
+            checkout();
+            localStorage.setItem('precioTotal', JSON.stringify(price));
+
+        });
     });
 
 

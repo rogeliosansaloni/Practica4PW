@@ -20,7 +20,7 @@
 }
 
 .normal{
-    fill: var(--maincolor);
+    fill: #bebebe;
 }
 
 .title{
@@ -36,23 +36,20 @@
 
 #header *{
     display: inline-block;
-    margin: auto;
 }
 
 #subtitle {
-    color: var(--maincolor);
-    margin-left: 50px;
+    color: #bebebe;
 }
 
 .data{
     background-color: #DEDEDE;
     border-radius: 20px;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
-    grid-gap: 50px;
-    margin: 50px;
-    padding: 30px;
+    grid-template-rows: auto auto auto;
+
 }
 
 .data *{
@@ -60,48 +57,47 @@
 }
 
 .amount {
+    margin-top: 10px;
     grid-column: 1 / span 2;
     width: 150px;
-    height: 100px;
-    margin: auto;
+    height: 40px;
     border-radius: 20%;
 }
 
 .picutre {
     grid-column: 3 / span 2;
-    width:100%;
-    margin: auto;
+    max-height: 150px;
+    max-width: 250px;
+    /*width:100%;*/
 }
 
 .title.name {
     grid-column: 1 / span 3;
     font-size: 40px;
-    color: var(--maincolor);
-    margin: auto;
+    margin-bottom: 10px;
+    margin-left:10px;
+    color: #bebebe;
 }
 
 .title.price {
-    font-size: 50px;
-    color: var(--maincolor);
-    margin: auto;
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #bebebe;
 }
 
 .discount label{
-    margin-left: 50px;
-    margin-top: 20px;
     display: block;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 0.01px;
     font-size: 30px;
-    color: --maincolor;
+    color: #bebebe;
     font-weight: bolder;
 }
 
 .discount input{
-    background-color: var(--maincolor);
+    background-color: #bebebe;
     border-radius: 10px;
     color: orangered;
-    margin: 50px;
     height: 80px;
     font-size: 40px;
     width: 90%;
@@ -114,8 +110,7 @@
 }
 
 .total{
-    margin-left: 20%;
-    margin-right: 50px;
+
 }
 
 .total *{
@@ -123,16 +118,15 @@
 }
 
 .total label{
-    margin-right: 10px;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 0.01px;
     font-size: 30px;
-    color: var(--maincolor);
+    color: #bebebe;
     font-weight: bolder;
 }
 
 .total input{
-    background-color: var(--maincolor);
+    background-color: #bebebe;
     border-radius: 10px;
     color: orangered;
     height: 80px;
@@ -143,8 +137,7 @@
 .checkout{
     background-color: orangered;
     color: white;
-    margin: 50px;
-    width: 90%; 
+    width: 90%;
     height: 80px;
     border-radius: 10px;   
     border: none;
@@ -160,7 +153,7 @@
 }
 
 .nav li:first-child{
-    margin-left: 70px;
+
 }
 
 svg {
@@ -169,37 +162,52 @@ svg {
 
 @media only screen and (min-width : 1025px) {
     .data{
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
+
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 100%;
+        margin-top: 40px;
+        width: 90%;
+        height: 100px;
     }
 
     .amount {
         grid-column: 1;
-        width: 90%;
-        height: 100px;
-        margin: auto;
+        width: 80%;
+        margin-left: 10px;
+        max-height: 100px;
+        max-width: 200px;
         border-radius: 30px;
     }
     
     .picutre {
-        grid-column: 1;
-        width:100%;
-        margin: auto;
+        grid-column: 2;
+        max-height: 100px;
     }
     
     .title.name {
-        grid-column: 1;
-        font-size: 90px;
-        color: var(--maincolor);
-        margin: auto;
+        grid-column: 3;
+        font-size: 30px;
+        margin-top: 10px;
+        color: #bebebe;
     }
     
     .title.price {
-        grid-column: 1;
-        font-size: 50px;
-        color: var(--maincolor);
-        margin: auto;
+        grid-column: 4;
+        font-size: 40px;
+        margin-top: 10px;
+        color: #bebebe;
     }
 
+    .discount {
+        margin-top: 100px;
+    }
 
+    .total {
+
+        margin-top: 50px;
+    }
+
+    #check {
+        margin-top: 50px;
+    }
  }

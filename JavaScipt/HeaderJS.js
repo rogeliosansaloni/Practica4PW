@@ -61,7 +61,6 @@ window.onload = function() {
     document.getElementById("m1").innerHTML = "HOME";
     document.getElementById("m2").innerHTML = "LIST (" + n_gafas + ")";
     document.getElementById("m3").innerHTML = "SEARCH";
-    console.log(document.getElementById("m1").innerHTML);
     var n_cesta = recuperaCesta();
     if (n_cesta == null) {
         document.getElementById("m4").innerHTML = "CART (0)";
@@ -106,7 +105,7 @@ function recuperaCesta () {
     if (cesta_json == null) {
         return null;
     } else {
-        var cesta_obj = JSON.parse(cesta_json);
+        var cesta = JSON.parse(cesta_json);
         var r = 0;
         for (var i = 0; i < cesta.length; i++) {
             r += cesta[i].qty;

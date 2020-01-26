@@ -31,6 +31,7 @@
 
         #list {
             height: 100%;
+            overflow: hidden;
         }
 
         iframe.floatingHeader {
@@ -48,7 +49,7 @@
         }
 
         iframe.body{
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             height: 100%;
@@ -69,20 +70,48 @@
 
         document.getElementById("header").addEventListener('load',function(e){
             let doc = document.getElementById("header").contentWindow.document;
+
             doc.getElementById("logo").addEventListener("click", () => {
-               document.location.reload();
+                document.getElementById("list").src = "./HTML/List.html";
+                document.getElementById("list").addEventListener('load',() => {
+                    document.location.reload();
+                });
             });
 
             doc.getElementById("m1").addEventListener("click", () => {
-                document.location.reload();
+                document.getElementById("list").src = "./HTML/List.html";
+                document.getElementById("list").addEventListener('load',() => {
+                    document.location.reload();
+                });
+                //document.location.reload();
+            });
+            doc.getElementById("m5").addEventListener("click", () => {
+                document.getElementById("list").src = "./HTML/List.html";
+                document.getElementById("list").addEventListener('load',() => {
+                    document.location.reload();
+                });
             });
 
-            doc.getElementById("m5").addEventListener("click", () => {
-                document.location.reload();
+            doc.getElementById("m2").addEventListener("click", () => {
+                document.getElementById("list").src = "./HTML/List.html";
+                document.getElementById("list").addEventListener('load',() => {
+                    document.location.reload();
+                });
             });
+
+            doc.getElementById("m4").addEventListener("click", () => {
+               document.getElementById("list").src = "./HTML/Cesta.html";
+                document.getElementById("list").addEventListener('load',() => {
+                    document.location.reload();
+
+                });
+
+
+
+            });
+
 
             doc.getElementById("x").addEventListener("click", () => {
-                console.log("holi");
 
                 if(document.body.classList.contains("initialBody")){
                     document.body.classList.remove("initialBody");
@@ -97,17 +126,20 @@
         });
 
         document.getElementById("list").addEventListener('load', function(e){
-            /*
+
             document.getElementById("list").contentWindow.botonBuy = () => {
 
-            };*/
-            console.log("a");
-            document.getElementById("list").contentWindow.openDetails =  () => {
-                document.body.classList.remove("initialBody");
-                document.getElementById("header").classList.add("floatingHeader");
-                document.getElementById("list").classList.add("body");
-                document.getElementById("footer").classList.add("floatingFooter");
             };
+            document.getElementById("list").contentWindow.checkout = () => {
+
+                document.getElementById("list").src = "./HTML/Form.html";
+                document.getElementById("list").addEventListener('load',() => {
+                    document.location.reload();
+
+                });
+
+            };
+
 
         });
 

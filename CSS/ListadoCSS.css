@@ -1,3 +1,6 @@
+body{
+    overflow-x:hidden;
+}
 
 :root{
     --font-family: 'Segoe UI';
@@ -125,6 +128,7 @@
     font-size: var(--tam-col-1);
     font-family: var(--font-family);
     color: var(--color);
+    margin-left:60px;
 }
 
 .tableRow .columnaItem{
@@ -137,11 +141,7 @@
     width: 100px;
 }
 
-@media screen and (min-width: 800px) and (max-width: 1200px) { 
-    body{
-        background-color: red;
-
-    }
+@media screen and (min-width: 800px) and (max-width: 1200px) {
     .items .item{
         display: flex;
         flex-direction: column;
@@ -153,6 +153,7 @@
         border-radius: 25px;
     }
 
+
     .menu .opcion{
         font-size: 18px;
         font-weight: bold;
@@ -162,10 +163,7 @@
 }
 
 @media screen and (max-width: 800px) {
-    body{
-        background-color: pink;
 
-    }
     .items .item{
         display: flex;
         flex-direction: column;
