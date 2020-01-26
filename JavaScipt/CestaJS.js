@@ -68,8 +68,7 @@ try{
             gafa.updateTriggers();
         });
 
-        console.log("e");
-        //document.getElementById("total").value = ""+price;
+        document.getElementById("total").value = ""+price;
 
         document.getElementById("check").addEventListener("click",()=>{
             gafas.forEach((gafa) => {
