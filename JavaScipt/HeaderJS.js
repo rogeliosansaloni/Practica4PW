@@ -107,12 +107,11 @@ function recuperaCesta () {
         return null;
     } else {
         var cesta_obj = JSON.parse(cesta_json);
-        return cesta_obj.length;
+        var r = 0;
+        for (var i = 0; i < cesta.length; i++) {
+            r += cesta[i].qty;
+        }
+        return r;
     }
-
-
-
-
-    
 }
 
