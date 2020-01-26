@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="index, página principal">
+    <meta name="author" content="Bernardo Nouel, Sandra Cea, Rogelio Sansaloni">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practica 4</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/IndexCSS.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/HeaderCSS.css" >
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/ResetSCSS.css" >
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/ListadoCSS.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/DetalleCSS.css">
+
+    
+</head>
+<body class="initialBody">
+
+<header class="full" id="head">
+        <span id="x"></span>
+
+        <img id = "logo" src="../images/logo.png" width="120" height="40" alt="logo">
+
+        <img id="lupa" src="../images/busqueda.svg" width="40" height="40" alt="lupa">
+
+    </header>
+
+    <div id="contenido" class="body_list" onload = "extraeListado();">
+        <section id="body" class="grafica body">
+            <ul class="menu">
+                <li class="opcion">ALL</li>
+                <li class="opcion">CLASSIC</li>
+                <li class="opcion">NEW</li>
+                <li class="opcion">CHIC</li>
+                <li class="opcion">GRAND</li>
+                <li class="opcion">ORIGINAL</li>
+            </ul>
+        </section>
+        <div class = "grafica body" id = "listado"></div>
+        <div class = "grafica detalle" id = "detalle"></div>
+    </div>
+
+   <!-- <main>-->
+        <div id="menu2" >
+            <p id = "m1"></p>
+            <p id = "m2"></p>
+            <p id = "m3"></p>
+            <p id = "m4"></p>
+            <p id = "m5"></p>
+        </div>
+    <!--</main>-->
+
+
+    <!--
+    <iframe id="header" src="./HTML/Header.html" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
+
+    <iframe id="list" src="./HTML/List.html" width="100%" frameborder="0"></iframe>
+
+    <iframe id="footer" src="./HTML/Footer.html" scrolling="no" width="100%" height="100vh" frameborder="0"></iframe>-->
+
+
+
+    <footer id="footer">
+        <img src="../images/brujula.svg" width="40" height="40" alt="brujula">
+        <img src="../images/str.svg" width="40" height="40" alt="catalogo">
+        <img src="../images/corazon.svg" width="40" height="40" alt="like">
+        <img id="bolso" src="../images/bolso.svg" width="40" height="40" alt="bolso">
+    </footer>
+
+    <script src="../JavaScipt/ListJS.js"></script>
+    <script src = "../JavaScipt/HeaderJS.js"></script>
+    <script src="../JavaScipt/IndexJS.js"></script>
+</body>
+</html>
