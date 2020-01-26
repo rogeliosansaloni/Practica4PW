@@ -63,7 +63,7 @@ function listenerComplete(){
 function cambioFormulario(){
     let price = localStorage.getItem("precioTotal");
     if(price == null) document.getElementById("precio").innerHTML = "0 €";
-    //else document.getElementById("precio").innerHTML = price + " €";
+    else document.getElementById("precio").innerHTML = price + " €";
 
     listenersMetodosPago();
     listenerComplete();
