@@ -9,13 +9,13 @@
     <form action="">
         <label class="super">PAYMENT</label>
         <div class="input">
-            <label class="sub" for="ADDRESS">ADDRESS</label>
-            <input class="rellenar" type="text" id="ADDRESS" />
+            <label class="sub" for="address">ADDRESS</label>
+            <input class="rellenar" type="text" id="address" onkeypress="return keyPressed(event)"/>
         </div>
 
         <div class="input">
-            <label class="sub" for="SHIPPING">SHIPPING</label>
-            <input class="rellenar" type="text" id="SHIPPING"/>
+            <label class="sub" for="shipping">SHIPPING</label>
+            <input class="rellenar" type="text" id="shipping"/>
         </div>
 
         <div class="input">
@@ -34,5 +34,6 @@
         <button id="botonComplete" type="button">COMPLETE</button>
 
     </form>
+    <script src="../JavaScipt/FormJS.js"></script>
 </body>
 </html>
