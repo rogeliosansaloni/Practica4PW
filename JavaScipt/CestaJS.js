@@ -84,6 +84,18 @@ try{
         });
     });
 
+    document.getElementById("logo").addEventListener("click", () => {
+        window.location.href = "../HTML/index.html";
+    });
+
+    document.getElementById("m1").addEventListener("click",() => {
+        window.location.href = "../HTML/index.html";
+    });
+
+    document.getElementById("m2").addEventListener("click",() => {
+        window.location.href = "../HTML/index.html";
+    });
+
 
 
 }catch(exception){
