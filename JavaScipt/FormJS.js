@@ -13,11 +13,14 @@ const token = "5e040aa11910c";
 
 getCountryFromCapital().then((r) => console.log(r));
 */
+let paisActual = "";
+
 function keyPressed(event){
     if(event.keyCode === 13){
-        //entrer pressed;
+        document.getElementById("address").value = paisActual;
+        document.getElementById("shipping").focus();
     }else{
-        //extraeInfoApi(document.getElementById("address").value);
+        extraeInfoApi(document.getElementById("address").value);
     }
 }
 
@@ -28,6 +31,7 @@ function muestraPais(){
 }
 
 function extraeInfoApi(pais){
+    if(pais==null || pais == undefined || pais=="") return;
     const url_pais= 'https://restcountries.eu/rest/v2/name/' + pais;
     fetch(url_pais)
         .then(function(response) {
@@ -40,9 +44,9 @@ function extraeInfoApi(pais){
 
 function actualizaAddress(json){
     let primerPais = json[0].name;
-    let address = document.getElementById("shipping");
     if(primerPais != null){
-        address.placeholder = primerPais.name;
+        alert(primerPais);
+        paisActual = primerPais;
     }
 }
 
