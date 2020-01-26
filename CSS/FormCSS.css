@@ -1,48 +1,134 @@
+:root{
+    --tipo-letra: Arial, Helvetica, sans-serif;
+    --color-letra: #888484;
+    --tam-super: 300%;
+    --tam-sub: 180%;
+    --tam-rellenar: 200%;
+    --tam-price: 300%;
+    --color-completa: #E66D29;
+    --color-completa-hover: #93471C;
+    --color-rellenar: #E2E2E2;
+    --borde-rectangulo: 35px;
+}
+
 form{
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
     align-content:center;
-
-}
-
-.sub{
-    color: dimgray;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    font-weight: bold;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .super{
-    color: gray;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
+    font-family: var(--tipo-letra);
+    font-size: var(--tam-super);
+    color: var(--color-letra);
     font-weight: lighter;
+    padding-top: 5%;
 }
 
 .input {
     display:flex;
     flex-direction: column;
+    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+.sub{
+    font-family: var(--tipo-letra);
+    font-size: var(--tam-sub);
+    font-weight: bold;
+    color: var(--color-letra);
+    padding-bottom: 4%;
+}
+
+.rellenar{
+    border: none;
+    height: 3em;
+    background-color: var(--color-rellenar);
+    color: var(--color-letra);
+    border-radius: var(--borde-rectangulo);
+    font-size: var(--tam-rellenar);
 }
 
 .botones{
     display:flex;
     flex-direction:row;
-    justify-content: space-evenly;
-    align-content:center;
-
-
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    font-size: var(--tam-rellenar);
 }
 
-#botonPaypal {
-
+#logoVisa{
+    height: 100%;
+    width: 50%;
 }
 
-#botonVisa {
-
+#logoPaypal{
+    height: 65%;
+    width: 40%;
 }
 
-.total{
+.botones #botonVisa {
+    height: 100%;
+    width: 35%;
+    background-color: #2D5793;
+    border: none;
+    border-radius: var(--borde-rectangulo);
+}
+
+.botones #botonPaypal {
+    height: 100%;
+    width: 60%;
+    background-color: #F7C457;
+    border: none;
+    border-radius: var(--borde-rectangulo);
+}
+
+.input.total{
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 8%;
+}
+
+.total .sub{
+    padding-right: 10%;
+    padding-bottom: 0%;
+}
+
+.total #precio{
+    display: flex;
+    font-family: var(--tipo-letra);
+    border-radius: var(--borde-rectangulo);
+    background-color: var(--color-rellenar);
+    color: var(--color-letra);
+    font-size: var(--tam-price);
+    width: 60%;
+    height: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+#botonComplete{
+    display:flex;
+    border: none;
+    justify-content: center;
+    font-family: var(--tipo-letra);
+    background-color: var(--color-completa);
+    border-radius: var(--borde-rectangulo);
+    font-size: var(--tam-super);
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    height: 2em;
+}
+
+#botonComplete:hover{
+    background-color: var(--color-completa-hover);
+    height: 2.5em;
 }

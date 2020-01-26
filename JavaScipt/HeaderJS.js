@@ -99,10 +99,7 @@ function pide () {
     }
 
     return fichero.data.glasses.length;
-    
-    
 }
-
 
 function recuperaCesta () {
     var cesta_json = localStorage.getItem('Cesta');
