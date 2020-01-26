@@ -33,6 +33,27 @@
             height: 100%;
         }
 
+        iframe.floatingHeader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        iframe.floatingFooter{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        iframe.body{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            z-index: 1;
+        }
 
 
     </style>
@@ -82,7 +103,10 @@
             };
             console.log("a");
             document.getElementById("list").contentWindow.openDetails =  () => {
-                console.log("Brilli Brilli");
+                document.body.classList.remove("initialBody");
+                document.getElementById("header").classList.add("floatingHeader");
+                document.getElementById("list").classList.add("body");
+                document.getElementById("footer").classList.add("floatingFooter");
             };
 
         });
