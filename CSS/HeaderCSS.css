@@ -1,13 +1,13 @@
-
+/*
 body {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 10% 260% 10%;
     background-color: white;
 }
-
+*/
 header {
-    
+
     background-color: white;
     display:flex;
     flex-direction: row;
@@ -16,7 +16,7 @@ header {
     align-items:center;
 }
 
-header.full {
+header.head {
     height: 110vh;
 }
 

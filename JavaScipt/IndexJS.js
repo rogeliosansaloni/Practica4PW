@@ -1,30 +1,30 @@
 
-document.getElementById("header").addEventListener('load',function(e){
-    let doc = document.getElementById("header").contentWindow.document;
+document.getElementById("head").addEventListener('load',function(e){
+    let doc = document.getElementById("head").contentWindow.document;
 
     doc.getElementById("logo").addEventListener("click", () => {
-        document.getElementById("list").src = "./HTML/List.html";
+        document.getElementById("list").src = "./HTML/index.html";
         document.getElementById("list").addEventListener('load',() => {
             document.location.reload();
         });
     });
 
     doc.getElementById("m1").addEventListener("click", () => {
-        document.getElementById("list").src = "./HTML/List.html";
+        document.getElementById("list").src = "./HTML/index.html";
         document.getElementById("list").addEventListener('load',() => {
             document.location.reload();
         });
         //document.location.reload();
     });
     doc.getElementById("m5").addEventListener("click", () => {
-        document.getElementById("list").src = "./HTML/List.html";
+        document.getElementById("list").src = "./HTML/index.html";
         document.getElementById("list").addEventListener('load',() => {
             document.location.reload();
         });
     });
 
     doc.getElementById("m2").addEventListener("click", () => {
-        document.getElementById("list").src = "./HTML/List.html";
+        document.getElementById("list").src = "./HTML/index.html";
         document.getElementById("list").addEventListener('load',() => {
             document.location.reload();
         });
